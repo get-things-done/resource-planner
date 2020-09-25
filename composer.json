@@ -1,0 +1,54 @@
+{
+    "name": "get-things-done/resource-planner",
+    "description": "",
+    "keywords": [
+        "get-things-done",
+        "resource-planner"
+    ],
+    "homepage": "https://github.com/get-things-done/resource-planner",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Cao Minh Duc",
+            "email": "caominhduc31081@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4",
+        "illuminate/support": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "GetThingsDone\\ResourcePlanner\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "GetThingsDone\\ResourcePlanner\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "GetThingsDone\\ResourcePlanner\\ResourcePlannerServiceProvider"
+            ],
+            "aliases": {
+                "ResourcePlanner": "GetThingsDone\\ResourcePlanner\\ResourcePlannerFacade"
+            }
+        }
+    }
+}
